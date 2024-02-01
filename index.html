@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #FF6B6B, #556270); /* Gradient Background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff; /* White text on dark background */
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 3em;
+            color: #fff; /* White text on dark background */
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+        }
+
+        .photo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .photo {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo:hover {
+            transform: scale(1.05);
+        }
+
+        .photo img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 12px;
+        }
+
+        .photo:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .overlay-content h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #30e4ae; /* Pink Color */
+        }
+
+        .overlay-content p {
+            margin: 0;
+            font-size: 1em;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+    <title>Attractive Photo Gallery</title>
+</head>
+<body>
+
+<h1>Summarization </h1>
+
+<div class="photo-container">
+    <a href="2.html">
+        <div class="photo">
+            <img src="r.png" width="600px" height="600px" alt="Photo 1">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h3>Text Summary</h3>
+                    <p>Copy the text</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="1.html">
+        <div class="photo">
+            <img src="r.png" alt="Photo 2">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h3>PDF Summary</h3>
+                    <p>Upload PDF</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="TextSummarization.html">
+        <div class="photo">
+            <img src="r.png" alt="Photo 3">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h3>Audio Summary</h3>
+                    <p>Golden hours and calmness</p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+</body>
+</html>
